@@ -1,0 +1,42 @@
+.navbar {
+  background-color: #00000069;
+  width: 100vw;
+  height: 4.5rem;
+  position: sticky;
+  box-shadow: 0rem 0.0625rem 0.3125rem #f61243;
+  display: flex;
+  position: fixed;
+  top: 0;
+
+  .brand {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul {
+    width: 80%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4.5rem;
+
+    li {
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 3.5;
+
+      &:hover {
+        color: #fff;
+        font-weight: 800;
+        text-shadow: 0rem 0rem 0.625rem #f61243, 0rem 0rem 1.25rem #f61243,
+          0rem 0rem 2.5rem #f61243, 0rem 0rem 5rem #f61243;
+      }
+    }
+  }
+}

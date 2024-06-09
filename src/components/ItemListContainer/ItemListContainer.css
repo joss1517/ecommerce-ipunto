@@ -1,0 +1,11 @@
+.saludo {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 0rem 0rem 0.625rem #f61243, 0rem 0rem 1.25rem #f61243,
+    0rem 0rem 2.25rem #f61243, 0rem 0rem 5rem #f61243;
+  padding: 2rem;
+  margin-top: 5rem;
+}
+
