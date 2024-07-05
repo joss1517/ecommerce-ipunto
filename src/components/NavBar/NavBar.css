@@ -1,18 +1,19 @@
 .navbar {
-  background-color: #00000069;
+  background-color: #0000005d;
   width: 100vw;
-  height: 4.5rem;
+  height: 8rem;
   position: sticky;
-  box-shadow: 0rem 0.0625rem 0.3125rem #f61243;
+  border-bottom: 3px solid #fff;
   display: flex;
   position: fixed;
+  z-index: 5;
   top: 0;
 
   .brand {
     width: 10%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
   }
 
@@ -25,17 +26,18 @@
     align-items: center;
     gap: 4.5rem;
 
-    li {
+    a {
       color: #fff;
       font-size: 1.2rem;
-      font-weight: 400;
+      font-weight: 500;
       line-height: 3.5;
+      text-decoration: none;
 
       &:hover {
         color: #fff;
         font-weight: 800;
-        text-shadow: 0rem 0rem 0.625rem #f61243, 0rem 0rem 1.25rem #f61243,
-          0rem 0rem 2.5rem #f61243, 0rem 0rem 5rem #f61243;
+        text-shadow: 0rem 0rem 0.625rem #ee0437, 0rem 0rem 1.25rem #ee0437,
+          0rem 0rem 2.5rem #ee0437, 0rem 0rem 5rem #ee0437;
       }
     }
   }

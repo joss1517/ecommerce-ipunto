@@ -1,0 +1,85 @@
+.container {
+  background-color: #000000bb;
+
+  width: 70%;
+  height: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+  top: 10rem;
+  position: relative;
+  border-radius: 2rem;
+  color: #BDBFC1;
+
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 75% 25%;
+
+  .image {
+    grid-column: 1/5;
+    grid-row: 1/2;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 70%;
+      max-height: 90%;
+      object-fit:contain;
+      border-radius: 15px;
+    }
+  }
+
+  .details {
+    grid-column: 5/8;
+    grid-row: 1/2;
+    padding: 1rem;
+
+    h2{
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+
+    p{
+        font-size: 1.2rem;
+        margin:.5rem;
+    }
+
+    ul li{
+        font-size: .9rem;
+        margin: .5rem;
+    }
+  }
+
+  .instructions {
+    grid-column: 1/8;
+    grid-row: 2/3;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+
+    width: 90%;
+    height: 100%;
+
+    h3{
+        color: #ee0437;
+        font-size: 1.3rem;
+    }
+
+    ol{
+        margin-left: 3rem;
+        
+    }
+    p{
+        text-align: center;
+    }
+
+    
+  }
+}

@@ -1,0 +1,14 @@
+.ItemList {
+  background-color: #161c21;
+  width: 100%;
+  position:relative ;
+  top: 9rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center ;
+  gap: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}

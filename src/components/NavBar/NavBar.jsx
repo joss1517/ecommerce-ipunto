@@ -1,28 +1,30 @@
-import logoipunto from '../../img/ipunto.png'
+import logoipunto from "../../img/ipunto.png";
 import "./NavBar.css";
-import CartWidget from './CartWidget';
+import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <nav className="navbar">
-      <div className="brand">
-        <img src={logoipunto} width={110} alt="" />
-      </div>
+      <nav className="navbar">
+          
+      <Link to="/" className="brand">
+        <img src={logoipunto} width={150} alt="" />
+      </Link>
 
       <ul>
-        <li>Cocina</li>
-        <li>Comedor</li>
-        <li>Sala</li>
-        <li>Recamara</li>
-        <li>Infantil</li>
-        <li>Salón de belleza</li>
-        <li>Gym</li>
-        <li>Dentista</li>
+        <Link to="/categoria/cocinas">Cocinas</Link>
+        <Link to="/categoria/comedores">Comedores</Link>
+        <Link to="/categoria/salas">Salas</Link>
+        <Link to="/categoria/recamaras">Recamaras</Link>
+        <Link to="/categoria/infantil">Infantil</Link>
+        <Link to="/categoria/belleza">Salón de Belleza</Link>
+        <Link to="/categoria/fitness">Fitness</Link>
+        
       </ul>
 
       <CartWidget />
     </nav>
   );
-}
+};
 
-export default NavBar
+export default NavBar;
