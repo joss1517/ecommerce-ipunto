@@ -1,4 +1,5 @@
 import "./ItemDetail.css";
+import ItemCount from "../ItemCount/ItemCount"
 
 
 const ItemDetail = ({ vinil }) => {
@@ -13,11 +14,10 @@ const ItemDetail = ({ vinil }) => {
         <p> {vinil.descripcion} </p>
         <p> Medidas: {vinil.medidas} </p>
         <p>
-          {" "}
-          Precio: $ <strong>{vinil.precio}</strong>{" "}
+          Precio: $ <strong>{vinil.precio}</strong>
         </p>
 
-        <ul type="circle">
+        <ul>
           <li>
             <strong>Material de Alta Calidad: </strong>
             Hecha de vinil adhesivo duradero, esta calcomanía es resistente al
@@ -43,6 +43,8 @@ const ItemDetail = ({ vinil }) => {
             uso en interiores, incluso en habitaciones de niños.
           </li>
         </ul>
+
+        <ItemCount stock={vinil.stock} onAdd={(count)=>console.log(`cantidad `, count)} />
       </div>
 
       <div className="instructions">
