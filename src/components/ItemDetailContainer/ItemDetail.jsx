@@ -1,8 +1,24 @@
+import { CartContext } from "../../context/CartContext";
+import { useContext } from "react";
+
 import "./ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount"
 
 
 const ItemDetail = ({ vinil }) => {
+
+    const { agregarProducto } =useContext(CartContext)
+
+    const agregarCarrito = (count) => {
+        const vinilCarrito = {
+            ...vinil,
+            cantidad: count
+        }
+        agregarProducto(vinilCarrito);
+    }
+
+
+
   return (
     <div className="container">
       <div className="image">
@@ -44,7 +60,7 @@ const ItemDetail = ({ vinil }) => {
           </li>
         </ul>
 
-        <ItemCount stock={vinil.stock} onAdd={(count)=>console.log(`cantidad `, count)} />
+        <ItemCount stock={vinil.stock} agregarCarrito={agregarCarrito} />
       </div>
 
       <div className="instructions">

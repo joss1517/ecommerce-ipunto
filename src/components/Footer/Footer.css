@@ -1,0 +1,70 @@
+.fContainer {
+  background-color: #00000098;
+  width: 100%;
+  height: 20rem;
+  border-top: 3px solid #d3d1d1;
+  /* margin-top: 5rem; */
+  /* position: sticky;
+  bottom: 20; */
+  font-size: 1.2rem;
+  font-weight: 500;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  .icons {
+    width: 33.3%;
+    height: 100%;
+    color: #d3d1d1;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 0.8rem;
+
+    img {
+      width: 9rem;
+    }
+
+    .redes {
+      display: flex;
+      flex-direction: row;
+      gap: 1.5rem;
+
+      a {
+        font-size: 1.5rem;
+        color: #f61243d2;
+      }
+    }
+  }
+
+  .copy {
+    width: 33.3%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    h3 {
+      color: #d3d1d1;
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .png {
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    img {
+      width: 360px;
+      height: 240px;
+    }
+  }
+}

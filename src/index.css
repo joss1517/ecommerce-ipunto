@@ -3,7 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  scrollbar-color:#ee0437 #161c21;
+  scrollbar-color:#f0204d #e0e0e0;
+  scrollbar-track-color: aqua;
 }
 
 

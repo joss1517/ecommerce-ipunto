@@ -1,8 +1,6 @@
 .ItemList {
   background-color: #161c21;
-  width: 100%;
-  position:relative ;
-  top: 9rem;
+    margin-top: 2rem;
 
   display: flex;
   flex-wrap: wrap;
