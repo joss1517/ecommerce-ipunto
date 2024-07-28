@@ -1,13 +1,16 @@
-import "./Footer.css";
 import { BsInstagram } from "react-icons/bs";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { TbBrandWhatsapp } from "react-icons/tb";
+
+import "./Footer.css";
+
+
 
 const Footer = () => {
   return (
     <div className="fContainer">
       <div className="icons">
-        <img src="https://i.postimg.cc/SQWskkbV/ipunto.png" alt="" />
+        <img src="https://i.postimg.cc/WbsC2WCH/ipunto.png" alt="" />
         <p>Nosotros</p>
         <p>Facturas</p>
         <p>ipunto09@gmail.com</p>
@@ -39,10 +42,12 @@ const Footer = () => {
       </div>
 
       <div className="png">
-        <img src="https://i.postimg.cc/C5fxqpRM/footer.png" alt="" />
+        <img src="https://i.postimg.cc/sDBSZykQ/footer.png" alt="" />
       </div>
     </div>
   );
 };
 
 export default Footer;
+
+

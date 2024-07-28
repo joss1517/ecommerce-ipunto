@@ -2,22 +2,47 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 0.5rem;
+  gap: 1rem;
 
 
-  .btn {
+  .button3 {
     width: 150px;
     height: 2rem;
     font-weight: 600;
+    font-size: .7rem;
+    border: none;
+
+
+    &:active {
+      transform: translate(3px, 3px);
+      border: 1px solid rgba(255, 250, 250, 0.116);
+
+    }
   }
+
   .btn1 {
     font-weight: 600;
+    font-size: 1.5rem;
+
     width: 2rem;
     height: 2rem;
+    border: none;
+
+    &:active {
+      transform: translate(3px, 3px);
+      border: 1px solid rgb(255, 250, 250, 0.116);
+    }
   }
 
   p {
-    color: azure;
+    color: #ddd;
     margin-left: 1rem;
+  }
+
+
 }
+
+.compra {
+  text-decoration: none;
+  border: none;
 }

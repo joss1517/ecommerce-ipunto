@@ -1,3 +1,8 @@
+import db from "../db/db.js";
+import { addDoc, collection } from "firebase/firestore";
+
+
+
 const viniles = [
   {
     id: "Coc-01",
@@ -706,7 +711,7 @@ const viniles = [
     nombre: "Viaja",
     descripcion: "Vinil Adhesivo Sticker Comedor  Calcomanía Decorativa",
     medidas: "100x60 cms.",
-    precio: 200,
+    precio: 210,
     stock: 10,
     categoria: "comedores",
     imagen: "https://i.postimg.cc/pXmkyNGY/comedor-02.webp",
@@ -1968,7 +1973,7 @@ const viniles = [
   },
   {
     id: "Rec-02",
-    nombre: "Lo maralilloso de los sueños",
+    nombre: "Lo maravilloso de los sueños",
     descripcion: "Vinil Adhesivo Sticker Recamara Calcomanía Decorativa",
     medidas: "150x40 cms.",
     precio: 260,
@@ -4517,12 +4522,12 @@ const viniles = [
   },
 ];
 
-const obtenerViniles = () => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(viniles);
-    }, 2000 );
+const seedProducts = () => {
+  viniles.map(({ id, ...rest }) => {
+    const vinilesRef = collection(db, "viniles")
+    addDoc(vinilesRef, rest)
   });
-};
+  return
+}
 
-export { obtenerViniles };
+seedProducts()

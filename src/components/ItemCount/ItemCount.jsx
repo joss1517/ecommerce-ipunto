@@ -1,40 +1,72 @@
-import { useState, } from "react"
-import "./ItemCount.css"
+import { useState } from "react";
 
-const ItemCount = ( {stock, agregarCarrito} ) => {
+import { Link } from "react-router-dom";
 
-    const [count, setCount] = useState(1)
+import "./ItemCount.css";
 
-    const increment= () => {
-        if (count < stock) {
-            setCount(count + 1);
-        }
-    };
+const ItemCount = ({ stock, agregarCarrito }) => {
+  const [count, setCount] = useState(1);
+  const [agregado, setAgregado] = useState(false)
 
-    
-    const decrement = () => {
-        if (count > 1) {
-            setCount(count - 1);
-        };
-    };
+  const increment = () => {
+    if (count < stock) {
+      setCount(count + 1);
+    }
+  };
 
-    
-    
-    
+  const decrement = () => {
+    if (count > 1) {
+      setCount(count - 1);
+    }
+  };
+
+  const seAgrego = () => {
+    agregarCarrito(count);
+    setAgregado(true)
+  }
+
+  if (agregado) {
+    return (
+      <Link to="/checkout" className="compra">
+        <button>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Terminar Comprar
+        </button>
+      </Link>
+    )
+  }
 
   return (
-      <div className="btnContainer">
-          
-          
-              
-      <button onClick={decrement} className="btn1"> - </button>
+    <div className="btnContainer">
+      <button onClick={decrement} className="btn1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>-
+      </button>
       <p> {count} </p>
-          <button onClick={increment} className="btn1"> + </button>
-          
-          <button   className="btn" onClick={ ()=> agregarCarrito(count)}>Agregar al Carrito</button>
-          
-    </div>
-  );
-}
+      <button onClick={increment} className="btn1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>+
+      </button>
 
-export default ItemCount
+      <button className="button3" onClick={seAgrego}>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Agregar al Carrito
+      </button>
+    </div>
+
+  );
+
+
+};
+
+export default ItemCount;

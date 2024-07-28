@@ -1,12 +1,10 @@
 .titleContainer {
-    background-color: transparent;
+  background-color: transparent;
   width: 50%;
   height: 90vh;
   padding: 2rem;
-  /* position: fixed;
-  top: 5rem; */
 
- 
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,7 +27,7 @@
 
   .btn {
     margin: 1rem;
-    border: thin solid #f61243;
+    border: thin solid #ff005d;
     border-radius: 5px;
     color: #fff;
     width: 8rem;
@@ -39,7 +37,8 @@
     text-decoration: none;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 3px 3px 5px #f61243;
+    box-shadow: 3px 3px 5px #ff005d;
+    text-decoration: none;
 
     &:active {
       transform: translate(3px, 3px);

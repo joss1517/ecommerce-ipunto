@@ -7,12 +7,12 @@ import { useState } from "react";
 const useLoading = () => {
   const [isLoading, setIsLoading] = useState(false);
 
-    // mostrar loading
+  // mostrar loading
   const showLoading = () => {
     setIsLoading(true);
   };
 
-    // ocultar loading
+  // ocultar loading
   const hideLoading = () => {
     setIsLoading(false);
   };
@@ -21,4 +21,3 @@ const useLoading = () => {
 };
 
 export default useLoading;
- 

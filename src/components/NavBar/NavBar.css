@@ -1,11 +1,12 @@
 .navbar {
-  background-color: #0000005d;
+  background-color: #0000009a;
+
   width: 100%;
   height: 8rem;
   position: sticky;
   border-bottom: 3px solid #adacac;
   display: flex;
-  position:sticky;
+  position: sticky;
   z-index: 1;
   top: 0;
 
@@ -36,8 +37,8 @@
       &:hover {
         color: #fff;
         font-weight: 800;
-        text-shadow: 0rem 0rem 0.625rem #ee0437, 0rem 0rem 1.25rem #ee0437,
-          0rem 0rem 2.5rem #ee0437, 0rem 0rem 5rem #ee0437;
+        text-shadow: 0rem 0rem 0.625rem #ff005d, 0rem 0rem 1.25rem #ff005d,
+          0rem 0rem 2.5rem #ff005d, 0rem 0rem 5rem #ff005d;
       }
     }
   }

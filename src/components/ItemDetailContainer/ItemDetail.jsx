@@ -1,25 +1,29 @@
-import { CartContext } from "../../context/CartContext";
 import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+
+
+import ItemCount from "../ItemCount/ItemCount"
 
 import "./ItemDetail.css";
-import ItemCount from "../ItemCount/ItemCount"
 
 
 const ItemDetail = ({ vinil }) => {
 
-    const { agregarProducto } =useContext(CartContext)
+  const { agregarProducto } = useContext(CartContext)
 
-    const agregarCarrito = (count) => {
-        const vinilCarrito = {
-            ...vinil,
-            cantidad: count
-        }
-        agregarProducto(vinilCarrito);
+  const agregarCarrito = (count) => {
+    const vinilCarrito = {
+      ...vinil,
+      cantidad: count
     }
+    agregarProducto(vinilCarrito);
+  }
 
 
 
   return (
+
+
     <div className="container">
       <div className="image">
         <img src={vinil.imagen} alt="" />

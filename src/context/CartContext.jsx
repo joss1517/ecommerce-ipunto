@@ -1,15 +1,31 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
-//* Creamos un contexto de React llamado CartContext
+// Funciones para interactuar con localStorage
+const saveCarritoToLocalStorage = (carrito) => {
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+};
+
+const getCarritoFromLocalStorage = () => {
+  const carrito = localStorage.getItem('carrito');
+  return carrito ? JSON.parse(carrito) : [];
+};
+
+// Creamos un contexto de React llamado CartContext
 const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
-  const [carrito, setCarrito] = useState([]);
+  // Inicializa el estado del carrito con el carrito almacenado en localStorage
+  const [carrito, setCarrito] = useState(getCarritoFromLocalStorage());
+
+  // Efecto para guardar el carrito en localStorage cada vez que se actualice
+  useEffect(() => {
+    saveCarritoToLocalStorage(carrito);
+  }, [carrito]);
 
   const agregarProducto = (producto) => {
     const condicion = estaEnElCarrito(producto.id);
     if (condicion) {
-      //* sumar la cantidad nueva
+      // Sumar la cantidad nueva
       const productosModificados = carrito.map((productoCarrito) => {
         if (productoCarrito.id === producto.id) {
           return {
@@ -23,31 +39,27 @@ const CartProvider = ({ children }) => {
 
       setCarrito(productosModificados);
     } else {
-      //* agregar producto nuevo
+      // Agregar producto nuevo
       setCarrito([...carrito, producto]);
     }
   };
 
   const estaEnElCarrito = (idProducto) => {
-    const condicion = carrito.some((producto) => producto.id === idProducto);
-    return condicion;
+    return carrito.some((producto) => producto.id === idProducto);
   };
 
   const cantidadTotal = () => {
-    const cantidad = carrito.reduce(
+    return carrito.reduce(
       (total, producto) => total + producto.cantidad,
       0
     );
-    return cantidad;
   };
 
-  // * función para devolver el precio total de la compra
   const precioTotal = () => {
-    const precio = carrito.reduce(
+    return carrito.reduce(
       (total, producto) => total + producto.cantidad * producto.precio,
       0
     );
-    return precio;
   };
 
   const vaciarCarrito = () => {
@@ -69,7 +81,7 @@ const CartProvider = ({ children }) => {
         cantidadTotal,
         vaciarCarrito,
         eliminarProducto,
-        precioTotal,
+        precioTotal
       }}
     >
       {children}

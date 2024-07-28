@@ -1,8 +1,9 @@
-import './Item.css'
 import { Link } from 'react-router-dom'
 
+import './Item.css'
 
-const Item = ({vinil}) => {
+
+const Item = ({ vinil }) => {
   return (
     <div className="cardContainer">
       <Link to={"/detalle/" + vinil.id} className="card">

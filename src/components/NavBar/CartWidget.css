@@ -1,12 +1,13 @@
-.cartwidget{
-    width: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .5rem;
+.cartwidget {
+  width: 10%;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
 
-    p{
-        color: #fff;
-        font-size: 1.3rem;
-    }
+  p {
+    color: #fff;
+    font-size: 1.3rem;
+  }
 }

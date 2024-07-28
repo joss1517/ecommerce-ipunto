@@ -1,12 +1,14 @@
-import logoipunto from "../../img/ipunto.png";
-import "./NavBar.css";
-import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
+
+import CartWidget from "./CartWidget";
+
+import "./NavBar.css";
+import logoipunto from "../../img/ipunto.png";
 
 const NavBar = () => {
   return (
-      <nav className="navbar">
-          
+    <nav className="navbar">
+
       <Link to="/" className="brand">
         <img src={logoipunto} width={150} alt="" />
       </Link>
@@ -19,7 +21,7 @@ const NavBar = () => {
         <Link to="/categoria/infantil">Infantil</Link>
         <Link to="/categoria/belleza">Salón de Belleza</Link>
         <Link to="/categoria/fitness">Fitness</Link>
-        
+
       </ul>
 
       <CartWidget />

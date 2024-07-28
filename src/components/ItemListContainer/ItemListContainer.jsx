@@ -1,46 +1,51 @@
-import { obtenerViniles } from "../../data/data.js";
 import { useState, useEffect } from "react";
-import ItemList from "./ItemList.jsx";
-import { useParams } from "react-router-dom";
 import useLoading from "../../hooks/useLoading";
-import Loading from "../Ejemplos/Loading.jsx";
+import { useParams } from "react-router-dom";
+
+import ItemList from "./ItemList.jsx";
+import Loading from "../Loading/Loading.jsx";
+import db from "../../db/db.js";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 import "./ItemListContainer.css";
 
 const ItemListContainer = () => {
   const [viniles, setViniles] = useState([]);
+  const { isLoading, showLoading, hideLoading } = useLoading();
 
   const { idCategory } = useParams();
 
-  const { isLoading, showLoading, hideLoading } = useLoading();
-
-  useEffect(() => {
-    // mostrar pantalla de carga
-    showLoading();
-
-    obtenerViniles()
+  const obtenerViniles = () => {
+    const vinilesRef = collection(db, "viniles");
+    getDocs(vinilesRef)
       .then((respuesta) => {
-        if (idCategory) {
-          //   filtrar productos por categoria
-          const vinilesFiltrados = respuesta.filter(
-            (producto) => producto.categoria === idCategory);
-          setViniles(vinilesFiltrados);
-        } else {
-          //   Guardar todos los productos
-          setViniles(respuesta);
-        }
-      })
+        const data = respuesta.docs.map((vinilDb) => {
+          return { id: vinilDb.id, ...vinilDb.data() };
+        });
 
-      .catch((error) => {
-        console.log(error);
-      })
-
-      .finally(() => {
-        console.log("Finalizo la promesa");
-
-        //   ocultar pantalla de carga
-        hideLoading();
+        setViniles(data);
       });
+  };
+
+  const obtenerVinilesFiltrados = () => {
+    const vinilesRef = collection(db, "viniles");
+    const q = query(vinilesRef, where("categoria", "==", idCategory))
+    getDocs(q)
+      .then((respuesta) => {
+        const data = respuesta.docs.map((vinilDb) => {
+          return { id: vinilDb.id, ...vinilDb.data() };
+        });
+        setViniles(data)
+      })
+  }
+  useEffect(() => {
+
+    if (idCategory) {
+      obtenerVinilesFiltrados()
+    } else {
+      obtenerViniles();
+    }
+
   }, [idCategory]);
 
   return (
