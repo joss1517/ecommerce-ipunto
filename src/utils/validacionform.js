@@ -1,4 +1,4 @@
-import { string, object, mixed } from "yup";
+import { string, object } from "yup";
 
 let userSchema = object({
   nombre: string().required("El campo nombre no puede quedar vacio"),

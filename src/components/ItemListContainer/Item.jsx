@@ -5,7 +5,7 @@ import './Item.css'
 
 const Item = ({ vinil }) => {
   return (
-    <div className="cardContainer">
+    <div >
       <Link to={"/detalle/" + vinil.id} className="card">
         <img src={vinil.imagen} alt="" />
         <p className="nombre">{vinil.nombre} </p>

@@ -28,10 +28,13 @@ const Carrito = () => {
 
 
   return (
+    
     <div className="carritoContainer">
       <h2 className="carrito">Productos en tu Carrito</h2>
       {carrito.map((productoCarrito) => (
-        <div key={productoCarrito.id} className="cardContainer">
+        <div key={productoCarrito.id} 
+        
+          className="cardContainer">
           <img src={productoCarrito.imagen} width={150} alt="" />
           <p>{productoCarrito.nombre}</p>
           <p>p/u ${productoCarrito.precio}</p>
@@ -40,7 +43,7 @@ const Carrito = () => {
             Total parcial {productoCarrito.precio * productoCarrito.cantidad}
           </p>
 
-          <button onClick={() => eliminarProducto(productoCarrito.id)}>
+          <button className="btn3" onClick={() => eliminarProducto(productoCarrito.id)}>
             <span></span>
             <span></span>
             <span></span>
@@ -49,6 +52,7 @@ const Carrito = () => {
           </button>
         </div>
       ))}
+
       <div className="total">
         <button onClick={vaciarCarrito}>
           <span></span>

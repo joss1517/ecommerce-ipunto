@@ -45,3 +45,72 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .titleContainer {
+    max-width: 60%;
+    padding: 1.5rem;
+
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+    }
+
+    .btn Link{
+      width: 7rem;
+      height: 2.2rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .titleContainer {
+    max-width: 80%;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1rem;
+      letter-spacing: 1.5px;
+    }
+
+    .btn {
+      width: 100%;
+      max-width: 10rem;
+      height: 2.5rem;
+    }
+  }
+
+  .itemListContainer {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .titleContainer {
+    max-width: 100%;
+    padding: 1rem;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    .btn {
+      width: 100%;
+      max-width: 8rem;
+      height: 2rem;
+    }
+  }
+}

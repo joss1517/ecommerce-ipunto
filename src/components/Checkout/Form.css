@@ -213,7 +213,12 @@ h2 {
   text-align: center;
 }
 
-.id {
-  color: #ff005d;
-  letter-spacing: 2px;
+.mensaje {
+  line-height: 1.6;
 }
+
+.id {
+  display: block;
+  margin-bottom: 5px;
+}
+

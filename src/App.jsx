@@ -22,7 +22,6 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Title />} />
-          {/* <Route path="/" element={<ItemListContainer /> } /> */}
           <Route path="/productos/viniles" element={<ItemListContainer />} />
           <Route path="/categoria/:idCategory" element={<ItemListContainer />} />
           <Route path="/detalle/:idVInil" element={<ItemDetailContainer />} />

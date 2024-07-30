@@ -11,8 +11,6 @@ const Footer = () => {
     <div className="fContainer">
       <div className="icons">
         <img src="https://i.postimg.cc/WbsC2WCH/ipunto.png" alt="" />
-        <p>Nosotros</p>
-        <p>Facturas</p>
         <p>ipunto09@gmail.com</p>
 
         <div className="redes">
@@ -42,7 +40,7 @@ const Footer = () => {
       </div>
 
       <div className="png">
-        <img src="https://i.postimg.cc/sDBSZykQ/footer.png" alt="" />
+        <img src="https://i.postimg.cc/sDBSZykQ/footer.png" alt=""/>
       </div>
     </div>
   );

@@ -8,12 +8,19 @@ import logoipunto from "../../img/ipunto.png";
 const NavBar = () => {
   return (
     <nav className="navbar">
-
       <Link to="/" className="brand">
         <img src={logoipunto} width={150} alt="" />
       </Link>
 
-      <ul>
+      <input type="checkbox" id="menu-toggle" className="menu-toggle" />
+
+      <label htmlFor="menu-toggle" className="hamburger-menu">
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </label>
+
+      <ul className="nav-links">
         <Link to="/categoria/cocinas">Cocinas</Link>
         <Link to="/categoria/comedores">Comedores</Link>
         <Link to="/categoria/salas">Salas</Link>
@@ -21,7 +28,6 @@ const NavBar = () => {
         <Link to="/categoria/infantil">Infantil</Link>
         <Link to="/categoria/belleza">Salón de Belleza</Link>
         <Link to="/categoria/fitness">Fitness</Link>
-
       </ul>
 
       <CartWidget />

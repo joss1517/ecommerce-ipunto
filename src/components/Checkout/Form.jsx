@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
-
 import "./Form.css";
 
 const Form = ({ datosForm, guardarDatosInput, enviarOrden }) => {
   return (
     <div className="form">
       <div className="login-box">
-        <p>Terminar la compra</p>
+        <p>Termina la compra</p>
         <form onSubmit={enviarOrden}>
           <div className="user-box">
             <input
@@ -40,6 +39,16 @@ const Form = ({ datosForm, guardarDatosInput, enviarOrden }) => {
 
           <div className="user-box">
             <input
+              type="email"
+              name="confirmEmail"
+              value={datosForm.confirmEmail}
+              onChange={guardarDatosInput}
+            />
+            <label>Confirmar Email</label>
+          </div>
+
+          <div className="user-box">
+            <input
               type="text"
               name="direccion"
               value={datosForm.direccion}
@@ -54,14 +63,14 @@ const Form = ({ datosForm, guardarDatosInput, enviarOrden }) => {
             <span></span>
             COMPRAR
           </button>
+
         </form>
-        <p>
-          Ver más productos
           <Link to="/productos/viniles" className="a2">
             Ir a Catálogo
-          </Link>
-        </p>
+        </Link>
+        
       </div>
+      
     </div>
   );
 };
