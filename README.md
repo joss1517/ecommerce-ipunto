@@ -22,7 +22,7 @@ Esta es una aplicación web de comercio electrónico para la venta de vinilos de
 
 - React DOM: Monta la aplicación en el DOM HTML y maneja las actualizaciones del mismo.
 
-- Firebase: Almacenamiento de datos y archivos, hosting, y funciones serverless.
+- Firebase: Almacenamiento de datos y archivos.
 
 - React Icons: Añade iconos.
 
