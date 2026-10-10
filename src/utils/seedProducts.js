@@ -1526,7 +1526,7 @@ const viniles = [
     precio: 520,
     stock: 4,
     categoria: "salas",
-    imagen: "https://i.postimg.cc/65Sd5H4g/sala-41.webp",
+    imagen: "/sala-41.webp",
   },
   {
     id: "Sal-42",
